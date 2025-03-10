@@ -41,11 +41,11 @@ from handlers.save_media import (
 MediaList = {}
 
 Bot = Client(
-    name=Config.BOT_USERNAME,
+    name=Config.rbshare_u_bot,
     in_memory=True,
-    bot_token=Config.BOT_TOKEN,
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH
+    bot_token=Config.7800836731:AAEGmY9eo53KxON1eOyZEGv48NsDDdhGxHg,
+    api_id=Config.21615012,
+    api_hash=Config.77b3b6e9003dc105e416d569b3f768d5
 )
 
 
@@ -58,7 +58,7 @@ async def _(bot: Client, cmd: Message):
 async def start(bot: Client, cmd: Message):
 
     if cmd.from_user.id in Config.BANNED_USERS:
-        await cmd.reply_text("Sorry, You are banned.")
+        await cmd.reply_text("Sorry, Go To Hell.")
         return
     if Config.UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, cmd)
@@ -74,7 +74,7 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/backup43946")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -82,8 +82,8 @@ async def start(bot: Client, cmd: Message):
                         InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion"),
-                        InlineKeyboardButton("YouTube Channel", url="https://youtube.com/@Tech_VJ")
+                        InlineKeyboardButton("Support Group", url="https://t.me/backup43946"),
+                        InlineKeyboardButton("YouTube Channel", url="https://t.me/backup43946")
                     ]
                 ]
             )
@@ -124,7 +124,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/backup43946)",
                                      disable_web_page_preview=True)
             return
 
@@ -152,7 +152,7 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = str(forwarded_msg.id)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=VJBotz_{str_to_b64(file_er_id)}"
+            share_link = f"https://t.me/Config.rbshare_u_bot?start=VJBotz_{str_to_b64(file_er_id)}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Link", url=share_link)]]))
@@ -319,7 +319,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://youtube.com/@Tech_VJ")
+                                             url="https://t.me/backup43946")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -337,7 +337,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://youtube.com/@Tech_VJ")
+                                             url="https://t.me/backup43946")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -354,7 +354,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/backup43946")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -362,8 +362,8 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion"),
-                        InlineKeyboardButton("YouTube Channel", url="https://youtube.com/@Tech_VJ")
+                        InlineKeyboardButton("Support Group", url="https://t.me/backup43946"),
+                        InlineKeyboardButton("YouTube Channel", url="https://t.me/backup43946")
                     ]
                 ]
             )
@@ -379,7 +379,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/backup43946).",
                         disable_web_page_preview=True
                     )
                     return
@@ -411,8 +411,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz"),
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/backup43946"),
+                        InlineKeyboardButton("Support Group", url="https://t.me/backup43946")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
